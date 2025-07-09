@@ -26,13 +26,13 @@ class Player(GameSprite):
         keys = pygame.key.get_pressed()
         if keys[pygame.K_UP] and self.rect.y > 5:
             self.rect.y -= self.speed
-        if keys[pygame.K_DOWN] and self.rect.y < 415:
+        if keys[pygame.K_DOWN] and self.rect.y < 345:
             self.rect.y += self.speed
     def update_l(self):
         keys = pygame.key.get_pressed()
         if keys[pygame.K_w] and self.rect.y > 5:
             self.rect.y -= self.speed
-        if keys[pygame.K_s] and self.rect.y < 415:
+        if keys[pygame.K_s] and self.rect.y < 345:
             self.rect.y += self.speed
 
 racket1 = Player('racket.png', 30, 200, 4, 50, 150)

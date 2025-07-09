@@ -40,9 +40,14 @@ racket2 = Player('racket.png', 520, 200, 4, 50, 150)
 ball = GameSprite('tenis_ball.png', 200, 200, 4, 50, 50)
 
 while is_game:
+    win.fill(back)
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
             is_game = False
+
+    racket1.update_l()
+
+    racket2.update_r()
 
     racket1.reset()
     racket2.reset()

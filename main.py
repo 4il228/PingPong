@@ -54,6 +54,9 @@ while is_game:
     if ball.rect.y > 450 or ball.rect.y < 50:
         speed_y *= -1
 
+    if pygame.sprite.collide_rect(racket1, ball) or pygame.sprite.collide_rect(racket2, ball):
+        speed_x *= -1
+
     racket1.update_l()
 
     racket2.update_r()
